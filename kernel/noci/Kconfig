@@ -1,0 +1,24 @@
+# SPDX-License-Identifier: GPL-2.0
+menuconfig NOCI_DUAL_PROFILE
+	bool "Singularity beryllium dual profile"
+	depends on MACH_XIAOMI_E10 && CPU_INPUT_BOOST
+	default n
+if NOCI_DUAL_PROFILE
+choice
+	prompt "Singularity profile"
+	default NOCI_BALANCE
+config NOCI_EXTREME
+	bool "Extreme"
+config NOCI_BALANCE
+	bool "Balance"
+endchoice
+config NOCI_TOUCH_IRQ_FIX
+	bool "Prefer LITTLE CPU0 for FocalTech/Novatek touch IRQs"
+	depends on NOCI_EXTREME && SMP
+	default n
+	help
+	  Remove performance-cluster IRQ management for the beryllium touch
+	  drivers. Pin hardware IRQ and its IRQ thread to CPU0 (CPU1 fallback).
+	  The generic IRQ thread keeps SCHED_FIFO priority 50. CPU0 is not
+	  globally isolated or reserved from other device interrupts.
+endif

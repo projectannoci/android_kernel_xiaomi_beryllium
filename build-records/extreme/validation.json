@@ -1,0 +1,16 @@
+{
+  "profile": "Extreme",
+  "build": 1,
+  "release": "4.9.337-Singularity-v1-Extreme",
+  "banner": "Linux version 4.9.337-Singularity-v1-Extreme (Singularity@ProjectNoci) (Ubuntu clang version 14.0.6) #1 SMP PREEMPT Thu Nov 5 18:41:03 WITA 2026",
+  "image_sha256": "9f14e88828fc67df2ffeeec5314587007657f145e4ff6bb43058e5b7418a7309",
+  "zip_sha256": "fc6a5b4393138cbb51cc8f45ef4017312207cbddcd37e814ad75943694e4014a",
+  "zip_bytes": 17944098,
+  "config": "embedded byte exact; tuning equivalent to prior profile",
+  "dtbs": "17; only Balance property names changed",
+  "export_CRCs": "byte exact with prior profile",
+  "undefined_symbols": 0,
+  "installer": "same code and tools; identity text only",
+  "boot": "not tested on device",
+  "root_runtime": "not tested on device"
+}

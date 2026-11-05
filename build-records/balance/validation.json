@@ -1,0 +1,16 @@
+{
+  "profile": "Balance",
+  "build": 1,
+  "release": "4.9.337-Singularity-v1-Balance",
+  "banner": "Linux version 4.9.337-Singularity-v1-Balance (Singularity@ProjectNoci) (Ubuntu clang version 14.0.6) #1 SMP PREEMPT Thu Nov 5 18:44:26 WITA 2026",
+  "image_sha256": "47d0ce687fee7a895a8c7b9e62747a97eb423b1ae892271989cf8b15d20f4779",
+  "zip_sha256": "2fbbf18275333584a4b895d39fa5fd32e410e4cf6c0e71dc5236aafa1248fbd2",
+  "zip_bytes": 17943314,
+  "config": "embedded byte exact; tuning equivalent to prior profile",
+  "dtbs": "17; only Balance property names changed",
+  "export_CRCs": "byte exact with prior profile",
+  "undefined_symbols": 0,
+  "installer": "same code and tools; identity text only",
+  "boot": "not tested on device",
+  "root_runtime": "not tested on device"
+}

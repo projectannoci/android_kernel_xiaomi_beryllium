@@ -1,0 +1,75 @@
+{
+  "name": "Singularity v1",
+  "author": "ProjectNoci",
+  "build_number": 1,
+  "device": "beryllium",
+  "rom_target": "ArrowOS 13.1 Extended A13 physical System_Ext",
+  "base": "Pierre2324/NGK_android_kernel_xiaomi_sdm845",
+  "base_commit": "294d27e2ffbd55dc78db0a5b4ad59eea9373c706",
+  "base_archive_sha256": "410a8c8975b15467155e93e36a26a9de9f1953809357d8f6409f482a84d55a32",
+  "compiler": "Clang 14.0.6",
+  "ksun_tag": "v1.0.9",
+  "ksun_commit": "2241696498ce9dd742ce80b52c3ed6cca26e03ea",
+  "ksun_driver_version": 12797,
+  "ksud_from": "KernelSU_Next_v1.0.9_12797-release.apk/lib/arm64-v8a/libksud_overlayfs.so",
+  "environment": {
+    "KBUILD_BUILD_USER": "Singularity",
+    "KBUILD_BUILD_HOST": "ProjectNoci",
+    "KBUILD_BUILD_VERSION": "1"
+  },
+  "targets": [
+    "singularity_extreme_defconfig",
+    "singularity_balance_defconfig",
+    "Image.gz-dtb"
+  ],
+  "build_entry": "make -f singularity.mk",
+  "changes": [
+    "Build identity Singularity@ProjectNoci, build #1",
+    "Balance profile naming in configuration, source bindings and packaging",
+    "No changes to performance policy or root integration"
+  ],
+  "validation": {
+    "compile": "both profiles exit 0",
+    "embedded_config": "byte exact with final config; effective tuning equivalent to prior profiles",
+    "dtbs": "17, same identity/order and active properties; Balance binding names updated",
+    "export_CRCs": "unchanged for both profiles",
+    "installer": "host preflight and repack fixtures passed; failure cases abort before write",
+    "boot": "not tested on device",
+    "root_runtime": "not tested on device",
+    "vendor_module_ABI": "not tested; vendor module payloads unavailable"
+  },
+  "profiles": {
+    "extreme": {
+      "profile": "Extreme",
+      "build": 1,
+      "release": "4.9.337-Singularity-v1-Extreme",
+      "banner": "Linux version 4.9.337-Singularity-v1-Extreme (Singularity@ProjectNoci) (Ubuntu clang version 14.0.6) #1 SMP PREEMPT Thu Nov 5 18:41:03 WITA 2026",
+      "image_sha256": "9f14e88828fc67df2ffeeec5314587007657f145e4ff6bb43058e5b7418a7309",
+      "zip_sha256": "fc6a5b4393138cbb51cc8f45ef4017312207cbddcd37e814ad75943694e4014a",
+      "zip_bytes": 17944098,
+      "config": "embedded byte exact; tuning equivalent to prior profile",
+      "dtbs": "17; only Balance property names changed",
+      "export_CRCs": "byte exact with prior profile",
+      "undefined_symbols": 0,
+      "installer": "same code and tools; identity text only",
+      "boot": "not tested on device",
+      "root_runtime": "not tested on device"
+    },
+    "balance": {
+      "profile": "Balance",
+      "build": 1,
+      "release": "4.9.337-Singularity-v1-Balance",
+      "banner": "Linux version 4.9.337-Singularity-v1-Balance (Singularity@ProjectNoci) (Ubuntu clang version 14.0.6) #1 SMP PREEMPT Thu Nov 5 18:44:26 WITA 2026",
+      "image_sha256": "47d0ce687fee7a895a8c7b9e62747a97eb423b1ae892271989cf8b15d20f4779",
+      "zip_sha256": "2fbbf18275333584a4b895d39fa5fd32e410e4cf6c0e71dc5236aafa1248fbd2",
+      "zip_bytes": 17943314,
+      "config": "embedded byte exact; tuning equivalent to prior profile",
+      "dtbs": "17; only Balance property names changed",
+      "export_CRCs": "byte exact with prior profile",
+      "undefined_symbols": 0,
+      "installer": "same code and tools; identity text only",
+      "boot": "not tested on device",
+      "root_runtime": "not tested on device"
+    }
+  }
+}

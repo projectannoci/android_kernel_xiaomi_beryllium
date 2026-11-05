@@ -1,0 +1,38 @@
+[
+  {
+    "profile": "Extreme",
+    "case": "repack",
+    "exit": 0,
+    "write_intent": true
+  },
+  {
+    "profile": "Extreme",
+    "case": "oversized",
+    "exit": 1,
+    "write_intent": false
+  },
+  {
+    "profile": "Extreme",
+    "case": "repack-failure",
+    "exit": 1,
+    "write_intent": false
+  },
+  {
+    "profile": "Extreme",
+    "case": "preflight-valid",
+    "exit": 0,
+    "write_intent": true
+  },
+  {
+    "profile": "Extreme",
+    "case": "preflight-invalid",
+    "exit": 1,
+    "write_intent": false
+  },
+  {
+    "profile": "Extreme",
+    "case": "preflight-missing",
+    "exit": 1,
+    "write_intent": false
+  }
+]
